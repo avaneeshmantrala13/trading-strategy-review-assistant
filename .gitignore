@@ -1,0 +1,19 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env.local
+
+# Generated data + trained artifacts
+data/generated/
+data/dataset/
+outputs/
+models/
+*.bak
+
+# OS
+.DS_Store

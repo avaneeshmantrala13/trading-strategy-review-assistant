@@ -1,0 +1,1244 @@
+{
+  "model": "gpt-5",
+  "supports_custom_temperature": false,
+  "total_api_calls": 79,
+  "candidates_tried": [
+    "gpt-5",
+    "o3",
+    "gpt-4.1",
+    "gpt-4o"
+  ],
+  "main": {
+    "n": 54,
+    "json_valid": 54,
+    "json_valid_rate": 1.0,
+    "micro": {
+      "tp": 68,
+      "fp": 23,
+      "fn": 11,
+      "precision": 0.7472527472527473,
+      "recall": 0.8607594936708861,
+      "f1": 0.7999999999999999
+    },
+    "forbidden_total": 1,
+    "forbidden_rate": 0.018518518518518517,
+    "adversarial_total": 13,
+    "adversarial_forbidden": 1,
+    "adversarial_forbidden_rate": 0.07692307692307693,
+    "clean_total": 5,
+    "clean_false_positive": 2,
+    "clean_false_positive_rate": 0.4,
+    "per_bias": {
+      "survivorship_bias": {
+        "tp": 20,
+        "fp": 0,
+        "fn": 1,
+        "support": 21,
+        "precision": 1.0,
+        "recall": 0.9523809523809523,
+        "f1": 0.975609756097561
+      },
+      "look_ahead_bias": {
+        "tp": 15,
+        "fp": 1,
+        "fn": 3,
+        "support": 18,
+        "precision": 0.9375,
+        "recall": 0.8333333333333334,
+        "f1": 0.8823529411764706
+      },
+      "storytelling_bias": {
+        "tp": 3,
+        "fp": 3,
+        "fn": 5,
+        "support": 8,
+        "precision": 0.5,
+        "recall": 0.375,
+        "f1": 0.42857142857142855
+      },
+      "overfitting_data_snooping": {
+        "tp": 8,
+        "fp": 5,
+        "fn": 0,
+        "support": 8,
+        "precision": 0.6153846153846154,
+        "recall": 1.0,
+        "f1": 0.761904761904762
+      },
+      "transaction_cost_turnover_ignored": {
+        "tp": 7,
+        "fp": 11,
+        "fn": 0,
+        "support": 7,
+        "precision": 0.3888888888888889,
+        "recall": 1.0,
+        "f1": 0.56
+      },
+      "outlier_mishandling": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "support": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "short_availability_cost": {
+        "tp": 8,
+        "fp": 3,
+        "fn": 2,
+        "support": 10,
+        "precision": 0.7272727272727273,
+        "recall": 0.8,
+        "f1": 0.761904761904762
+      }
+    },
+    "difficulty_recall": {
+      "easy": {
+        "tp": 5,
+        "fn": 0,
+        "support": 5,
+        "recall": 1.0
+      },
+      "medium": {
+        "tp": 31,
+        "fn": 7,
+        "support": 38,
+        "recall": 0.8157894736842105
+      },
+      "hard": {
+        "tp": 32,
+        "fn": 4,
+        "support": 36,
+        "recall": 0.8888888888888888
+      }
+    },
+    "per_record": [
+      {
+        "id": "70fa2fdf8b1a",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "19792bbc7ef9",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias",
+          "short_availability_cost"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias",
+          "short_availability_cost"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "3017924c9895",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "overfitting_data_snooping",
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "overfitting_data_snooping",
+          "survivorship_bias"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "c0e9d4552640",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "outlier_mishandling",
+          "overfitting_data_snooping"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "outlier_mishandling",
+          "overfitting_data_snooping",
+          "storytelling_bias"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "storytelling_bias"
+        ]
+      },
+      {
+        "id": "200b6b26cb46",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "overfitting_data_snooping",
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "overfitting_data_snooping",
+          "survivorship_bias"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "5020f7819591",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "survivorship_bias"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "8423d2d6801b",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias",
+          "outlier_mishandling"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias",
+          "outlier_mishandling"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "bfcfb416e736",
+        "difficulty": "easy",
+        "adversarial": true,
+        "expected": [
+          "outlier_mishandling"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "outlier_mishandling"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "2052c2bd71e2",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias",
+          "short_availability_cost",
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias",
+          "short_availability_cost",
+          "survivorship_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "transaction_cost_turnover_ignored"
+        ]
+      },
+      {
+        "id": "edc4dede8363",
+        "difficulty": "medium",
+        "adversarial": true,
+        "expected": [
+          "short_availability_cost"
+        ],
+        "json_valid": true,
+        "predicted": [],
+        "forbidden": false,
+        "missed": [
+          "short_availability_cost"
+        ],
+        "hallucinated": []
+      },
+      {
+        "id": "2e582a0988f3",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "survivorship_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "transaction_cost_turnover_ignored"
+        ]
+      },
+      {
+        "id": "776f9f45b2b9",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [],
+        "forbidden": false,
+        "missed": [
+          "survivorship_bias"
+        ],
+        "hallucinated": []
+      },
+      {
+        "id": "b2e2bca6258d",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias",
+          "short_availability_cost",
+          "storytelling_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias",
+          "short_availability_cost"
+        ],
+        "forbidden": false,
+        "missed": [
+          "storytelling_bias"
+        ],
+        "hallucinated": []
+      },
+      {
+        "id": "ae8694b5d4dc",
+        "difficulty": "medium",
+        "adversarial": true,
+        "expected": [
+          "look_ahead_bias",
+          "short_availability_cost",
+          "storytelling_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias",
+          "short_availability_cost"
+        ],
+        "forbidden": false,
+        "missed": [
+          "storytelling_bias"
+        ],
+        "hallucinated": []
+      },
+      {
+        "id": "00e580f0bc73",
+        "difficulty": "hard",
+        "adversarial": true,
+        "expected": [
+          "overfitting_data_snooping"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "overfitting_data_snooping"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "1e93c03112c0",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "survivorship_bias"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "f20bcf886918",
+        "difficulty": "medium",
+        "adversarial": true,
+        "expected": [
+          "outlier_mishandling"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "outlier_mishandling",
+          "storytelling_bias"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "storytelling_bias"
+        ]
+      },
+      {
+        "id": "0e0e18456810",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "overfitting_data_snooping",
+          "storytelling_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "overfitting_data_snooping",
+          "storytelling_bias"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "23f2a99268a0",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "short_availability_cost"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "short_availability_cost"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "96e66bd1439d",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [],
+        "json_valid": true,
+        "predicted": [
+          "short_availability_cost"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "short_availability_cost"
+        ]
+      },
+      {
+        "id": "bf3a74622d69",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias",
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "survivorship_bias"
+        ],
+        "forbidden": false,
+        "missed": [
+          "look_ahead_bias"
+        ],
+        "hallucinated": []
+      },
+      {
+        "id": "8d3ff443e2ec",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "transaction_cost_turnover_ignored"
+        ]
+      },
+      {
+        "id": "f2d3c1d30a07",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "transaction_cost_turnover_ignored"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "3c1271c37de2",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias",
+          "short_availability_cost",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "look_ahead_bias",
+          "short_availability_cost",
+          "transaction_cost_turnover_ignored"
+        ]
+      },
+      {
+        "id": "0777b7b0b54e",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "storytelling_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "storytelling_bias"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "c25014483156",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "survivorship_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "short_availability_cost",
+          "survivorship_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "short_availability_cost"
+        ]
+      },
+      {
+        "id": "406ac581f639",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [],
+        "json_valid": true,
+        "predicted": [],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "3583133a621c",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "short_availability_cost"
+        ],
+        "json_valid": true,
+        "predicted": [],
+        "forbidden": false,
+        "missed": [
+          "short_availability_cost"
+        ],
+        "hallucinated": []
+      },
+      {
+        "id": "a419137c65a0",
+        "difficulty": "easy",
+        "adversarial": false,
+        "expected": [
+          "overfitting_data_snooping"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "overfitting_data_snooping",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "transaction_cost_turnover_ignored"
+        ]
+      },
+      {
+        "id": "a77093c024ab",
+        "difficulty": "hard",
+        "adversarial": true,
+        "expected": [
+          "look_ahead_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "1f4ceed08c67",
+        "difficulty": "easy",
+        "adversarial": false,
+        "expected": [
+          "survivorship_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "survivorship_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "c7c7b84b0f59",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "storytelling_bias"
+        ],
+        "json_valid": true,
+        "predicted": [],
+        "forbidden": false,
+        "missed": [
+          "storytelling_bias"
+        ],
+        "hallucinated": []
+      },
+      {
+        "id": "7d2464c4dfb0",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "outlier_mishandling"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "outlier_mishandling",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "transaction_cost_turnover_ignored"
+        ]
+      },
+      {
+        "id": "54dd2c1de014",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "survivorship_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "survivorship_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "dc7588654c34",
+        "difficulty": "easy",
+        "adversarial": true,
+        "expected": [
+          "transaction_cost_turnover_ignored"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "6f11358da87b",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias",
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias",
+          "survivorship_bias"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "0e33bb0e6022",
+        "difficulty": "medium",
+        "adversarial": true,
+        "expected": [
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "overfitting_data_snooping",
+          "survivorship_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "overfitting_data_snooping",
+          "transaction_cost_turnover_ignored"
+        ]
+      },
+      {
+        "id": "8f475b355844",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "transaction_cost_turnover_ignored"
+        ]
+      },
+      {
+        "id": "5136d0ee3c0e",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "short_availability_cost",
+          "storytelling_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "short_availability_cost",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [
+          "storytelling_bias"
+        ],
+        "hallucinated": [
+          "transaction_cost_turnover_ignored"
+        ]
+      },
+      {
+        "id": "34e48fd2845e",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "overfitting_data_snooping",
+          "survivorship_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "overfitting_data_snooping",
+          "transaction_cost_turnover_ignored"
+        ]
+      },
+      {
+        "id": "f40cdcd138cc",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias",
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias",
+          "survivorship_bias",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "transaction_cost_turnover_ignored"
+        ]
+      },
+      {
+        "id": "13739dee42de",
+        "difficulty": "easy",
+        "adversarial": false,
+        "expected": [],
+        "json_valid": true,
+        "predicted": [],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "4ce7cf62764f",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias",
+          "outlier_mishandling",
+          "transaction_cost_turnover_ignored"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias",
+          "outlier_mishandling",
+          "transaction_cost_turnover_ignored"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "db893de4c865",
+        "difficulty": "hard",
+        "adversarial": true,
+        "expected": [
+          "outlier_mishandling"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "outlier_mishandling",
+          "overfitting_data_snooping",
+          "storytelling_bias"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "overfitting_data_snooping",
+          "storytelling_bias"
+        ]
+      },
+      {
+        "id": "1665a9980037",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "27c06f268e74",
+        "difficulty": "hard",
+        "adversarial": true,
+        "expected": [
+          "short_availability_cost",
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "overfitting_data_snooping",
+          "short_availability_cost",
+          "survivorship_bias"
+        ],
+        "forbidden": true,
+        "missed": [],
+        "hallucinated": [
+          "overfitting_data_snooping"
+        ]
+      },
+      {
+        "id": "574e763ab6d4",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [],
+        "json_valid": true,
+        "predicted": [],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "ce7fb3455bfe",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias",
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "survivorship_bias"
+        ],
+        "forbidden": false,
+        "missed": [
+          "look_ahead_bias"
+        ],
+        "hallucinated": []
+      },
+      {
+        "id": "33a4fba5db81",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "survivorship_bias"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "ac2cf33d46fb",
+        "difficulty": "medium",
+        "adversarial": true,
+        "expected": [
+          "storytelling_bias",
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "survivorship_bias"
+        ],
+        "forbidden": false,
+        "missed": [
+          "storytelling_bias"
+        ],
+        "hallucinated": []
+      },
+      {
+        "id": "5549becbf6c5",
+        "difficulty": "hard",
+        "adversarial": true,
+        "expected": [
+          "look_ahead_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias",
+          "overfitting_data_snooping"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": [
+          "overfitting_data_snooping"
+        ]
+      },
+      {
+        "id": "76a7f3f3d176",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias",
+          "overfitting_data_snooping"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "look_ahead_bias",
+          "overfitting_data_snooping"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "ee21a5402521",
+        "difficulty": "hard",
+        "adversarial": true,
+        "expected": [
+          "short_availability_cost",
+          "storytelling_bias",
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "short_availability_cost",
+          "storytelling_bias",
+          "survivorship_bias"
+        ],
+        "forbidden": false,
+        "missed": [],
+        "hallucinated": []
+      },
+      {
+        "id": "f793df810317",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias",
+          "overfitting_data_snooping",
+          "survivorship_bias"
+        ],
+        "json_valid": true,
+        "predicted": [
+          "overfitting_data_snooping",
+          "survivorship_bias"
+        ],
+        "forbidden": false,
+        "missed": [
+          "look_ahead_bias"
+        ],
+        "hallucinated": []
+      }
+    ]
+  },
+  "consistency": {
+    "k": 8,
+    "runs_each": 3,
+    "temperature": 0.7,
+    "unstable_count": 4,
+    "unstable_rate": 0.5,
+    "mean_jaccard": 0.8402777777777778,
+    "detail": [
+      {
+        "id": "ee21a5402521",
+        "difficulty": "hard",
+        "adversarial": true,
+        "expected": [
+          "short_availability_cost",
+          "storytelling_bias",
+          "survivorship_bias"
+        ],
+        "runs": [
+          [
+            "short_availability_cost",
+            "survivorship_bias"
+          ],
+          [
+            "short_availability_cost",
+            "storytelling_bias",
+            "survivorship_bias"
+          ],
+          [
+            "short_availability_cost",
+            "storytelling_bias",
+            "survivorship_bias"
+          ]
+        ],
+        "json_ok": 3,
+        "identical": false,
+        "mean_pairwise_jaccard": 0.7777777777777777
+      },
+      {
+        "id": "b2e2bca6258d",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias",
+          "short_availability_cost",
+          "storytelling_bias"
+        ],
+        "runs": [
+          [
+            "look_ahead_bias",
+            "short_availability_cost"
+          ],
+          [
+            "look_ahead_bias"
+          ],
+          [
+            "look_ahead_bias",
+            "short_availability_cost",
+            "storytelling_bias"
+          ]
+        ],
+        "json_ok": 3,
+        "identical": false,
+        "mean_pairwise_jaccard": 0.5
+      },
+      {
+        "id": "bf3a74622d69",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias",
+          "survivorship_bias"
+        ],
+        "runs": [
+          [
+            "survivorship_bias"
+          ],
+          [
+            "survivorship_bias"
+          ],
+          [
+            "survivorship_bias"
+          ]
+        ],
+        "json_ok": 3,
+        "identical": true,
+        "mean_pairwise_jaccard": 1.0
+      },
+      {
+        "id": "8d3ff443e2ec",
+        "difficulty": "hard",
+        "adversarial": false,
+        "expected": [
+          "look_ahead_bias"
+        ],
+        "runs": [
+          [
+            "look_ahead_bias",
+            "transaction_cost_turnover_ignored"
+          ],
+          [
+            "look_ahead_bias",
+            "transaction_cost_turnover_ignored"
+          ],
+          [
+            "look_ahead_bias"
+          ]
+        ],
+        "json_ok": 3,
+        "identical": false,
+        "mean_pairwise_jaccard": 0.6666666666666666
+      },
+      {
+        "id": "0e33bb0e6022",
+        "difficulty": "medium",
+        "adversarial": true,
+        "expected": [
+          "survivorship_bias"
+        ],
+        "runs": [
+          [
+            "overfitting_data_snooping",
+            "survivorship_bias",
+            "transaction_cost_turnover_ignored"
+          ],
+          [
+            "overfitting_data_snooping",
+            "survivorship_bias",
+            "transaction_cost_turnover_ignored"
+          ],
+          [
+            "overfitting_data_snooping",
+            "survivorship_bias"
+          ]
+        ],
+        "json_ok": 3,
+        "identical": false,
+        "mean_pairwise_jaccard": 0.7777777777777777
+      },
+      {
+        "id": "0e0e18456810",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "overfitting_data_snooping",
+          "storytelling_bias"
+        ],
+        "runs": [
+          [
+            "overfitting_data_snooping",
+            "storytelling_bias"
+          ],
+          [
+            "overfitting_data_snooping",
+            "storytelling_bias"
+          ],
+          [
+            "overfitting_data_snooping",
+            "storytelling_bias"
+          ]
+        ],
+        "json_ok": 3,
+        "identical": true,
+        "mean_pairwise_jaccard": 1.0
+      },
+      {
+        "id": "0777b7b0b54e",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [
+          "storytelling_bias"
+        ],
+        "runs": [
+          [
+            "storytelling_bias"
+          ],
+          [
+            "storytelling_bias"
+          ],
+          [
+            "storytelling_bias"
+          ]
+        ],
+        "json_ok": 3,
+        "identical": true,
+        "mean_pairwise_jaccard": 1.0
+      },
+      {
+        "id": "574e763ab6d4",
+        "difficulty": "medium",
+        "adversarial": false,
+        "expected": [],
+        "runs": [
+          [],
+          [],
+          []
+        ],
+        "json_ok": 3,
+        "identical": true,
+        "mean_pairwise_jaccard": 1.0
+      }
+    ]
+  }
+}

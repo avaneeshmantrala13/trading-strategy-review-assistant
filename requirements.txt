@@ -1,0 +1,9 @@
+# Data-generation pipeline dependencies.
+# (Training deps -- unsloth / trl / peft -- are installed separately on the GPU box;
+#  see README "Training" section.)
+openai>=1.30
+pydantic>=2.6
+python-dotenv>=1.0
+tenacity>=8.2
+rapidfuzz>=3.6
+tqdm>=4.66
