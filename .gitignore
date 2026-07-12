@@ -10,10 +10,10 @@ venv/
 
 # Generated data + trained artifacts
 data/generated/
-data/dataset/
 outputs/
 models/
 *.bak
+# NOTE: data/dataset/ IS tracked (the published dataset — the real deliverable)
 
 # OS
 .DS_Store

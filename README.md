@@ -9,6 +9,16 @@ on high-quality curated data beats an expensive prompted frontier model on cost,
 control, and consistency. **The dataset is the deliverable; the model is just it
 made runnable.**
 
+## Artifacts
+
+| Artifact | Link |
+|---|---|
+| 📊 **Dataset** (the real deliverable) | https://huggingface.co/datasets/d3xt3rm0rgan/trading-strategy-bias-audits |
+| 🤖 **Model** — LoRA adapter | https://huggingface.co/d3xt3rm0rgan/trading-strategy-skeptic-qwen3-4b |
+| 🦙 **Model** — GGUF (Ollama-ready demo) | https://huggingface.co/d3xt3rm0rgan/trading-strategy-skeptic-qwen3-4b-gguf |
+| 📓 Training + eval notebook | [`train_qwen3_4b_colab.ipynb`](train_qwen3_4b_colab.ipynb) |
+| 🧪 Error analysis + data iteration | [`docs/ERROR_ANALYSIS.md`](docs/ERROR_ANALYSIS.md) |
+
 ## Results (headline)
 
 Trained with QLoRA (Unsloth) over 4 cumulative epochs ("rounds"), scored on the
